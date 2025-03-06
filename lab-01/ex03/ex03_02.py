@@ -1,10 +1,9 @@
-def truy_cap_ca_nhan(tuple_data):
-        first_element = tuple_data[0]
-        last_element = tuple_data[-1]
-        return first_element, last_element
 
-input_tuple = eval(input("Nhap tuple, vi du(1, 2, 3): "))
-first, last = truy_cap_ca_nhan(input_tuple)
+def dao_nguoc_list(lst):
+    return lst[::-1]
 
-print("Phan tu dau tien: ", first)
-print("Phan tu cuoi cung: ", last)
+input_list = input("Nhap danh sach cac so, cach nhau bang dau phay: ")
+numbers = list(map(int, input_list.split(',')))
+
+list_dao_nguoc = dao_nguoc_list(numbers)
+print("List sau khi dao nguoc:", list_dao_nguoc)
