@@ -1,14 +1,10 @@
-def dem_so_lan_xuat_hien(lst):
-    count_dict = {}
-    for item in lst:
-        if item in count_dict:
-            count_dict[item] += 1
-        else:
-            count_dict[item] = 1
-        return count_dict
+def truycapphantu(tupledata):
+    firstelenment=tupledata[0]
+    lastelenment=tupledata[-1]
+    return firstelenment,lastelenment
 
-input_string = input("Nhap danh sach cac tu, cach nhau bang dau cach: ")
-word_list = input_string.split()
+inputtuple= eval(input("nhap tuple,vi du (1,2,3):"))
+first,last=truycapphantu(inputtuple)
 
-so_lan_xuat_hien = dem_so_lan_xuat_hien(word_list)
-print("So lan xuat hien cua cac phan tu:", so_lan_xuat_hien)
+print("phan tu dau:",first)
+print("phan tu cuoi:",last)
